@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import heroImage from "../assets/hero-image.jpg";
 
 function Hero() {
   return (
     <section
       className="relative h-[85vh] bg-cover bg-center bg-fixed flex items-center"
       style={{
-        backgroundImage: "url('/src/assets/hero-image.jpg')",
+        backgroundImage: `url(${heroImage})`,
       }}
     >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20">

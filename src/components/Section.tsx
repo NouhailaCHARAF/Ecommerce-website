@@ -1,3 +1,5 @@
+import upgradeImage from "../assets/upgrade-your-home.webp";
+
 export default function BrandDealBanner() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12">
@@ -27,7 +29,7 @@ export default function BrandDealBanner() {
 
         <div className="h-72 md:h-full md:min-h-[420px]">
           <img
-            src="/src/assets/upgrade-your-home.webp"
+            src={upgradeImage}
             alt="Special offer"
             className="h-full w-full object-cover"
           />

@@ -1,29 +1,33 @@
 import { Link } from "react-router-dom";
+import beauty from "../assets/Beauty.webp";
+import fragrances from "../assets/Fragrances.webp";
+import furniture from "../assets/Furniture.webp";
+import groceries from "../assets/Groceries.webp";
 
 const categories = [
   {
     id: 1,
     name: "Beauty",
     count: "5 PRODUCTS",
-    image: "/src/assets/Beauty.webp",
+    image: beauty,
   },
   {
     id: 2,
     name: "Fragrances",
     count: "5 PRODUCTS",
-    image: "/src/assets/Fragrances.webp",
+    image: fragrances,
   },
   {
     id: 3,
     name: "Furniture",
     count: "5 PRODUCTS",
-    image: "src/assets/Furniture.webp",
+    image: furniture,
   },
   {
     id: 4,
     name: "Groceries",
     count: "15 PRODUCTS",
-    image: "src/assets/Groceries.webp",
+    image: groceries,
   },
 ];
 

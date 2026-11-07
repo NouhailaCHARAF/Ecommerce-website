@@ -1,3 +1,6 @@
+import storeImage from "../assets/store.webp";
+import ourStoryImage from "../assets/our_story.webp";
+
 export default function AboutSection() {
   return (
     <>
@@ -35,7 +38,7 @@ export default function AboutSection() {
           </div>
 
           <img
-            src="/src/assets/store.webp"
+            src={storeImage}
             alt="Our store"
             className="h-[400px] w-full object-cover md:h-[480px]"
           />
@@ -63,7 +66,7 @@ export default function AboutSection() {
       <section
         className="h-[550px] w-full bg-fixed bg-cover bg-center md:h-[650px]"
         style={{
-          backgroundImage: "url('src/assets/our_story.webp')",
+          backgroundImage: `url(${ourStoryImage})`,
         }}
       >
         <div className="h-full w-full bg-black/20" />
