@@ -1,75 +1,94 @@
-# React + TypeScript + Vite
+# Ecommerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive E-commerce website built with React, TypeScript, Tailwind CSS, and Supabase.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is a full-stack E-commerce website designed to provide a smooth and user-friendly shopping experience. It includes a product catalog, product details, shopping cart, and Supabase integration for database management and image storage.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** – UI development
+- **TypeScript** – Type safety
+- **Tailwind CSS** – Styling and responsive design
+- **Supabase** – Database and Storage
+- **React Router** – Navigation
+- **Lucide React** – Icons
+- **Vite** – Development and build tool
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive design for desktop, tablet, and mobile.
+- Product catalog with product information.
+- Product details pages.
+- Shopping cart functionality.
+- Add and remove products from the cart.
+- Update product quantities.
+- Automatic cart total calculation.
+- Supabase database integration.
+- Supabase Storage for product images.
+- About and Contact pages.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```text
+src/
+├── assets/
+├── components/
+├── context/
+├── pages/
+├── App.tsx
+├── main.tsx
+├── index.css
+└── supabase.ts
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+scripts/
+└── migrate-images.mjs
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the repository
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone YOUR_REPOSITORY_URL
 ```
+
+### 2. Navigate to the project folder
+
+```bash
+cd ecommerce-website
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure environment variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_KEY=your_supabase_publishable_or_anon_key
+```
+
+Replace the placeholder values with your Supabase project credentials.
+
+### 5. Run the development server
+
+```bash
+npm run dev
+```
+
+## Security
+
+- Environment variables are excluded from Git.
+- Supabase Service Role Key is kept private and must never be exposed in frontend code.
+- Database access should be protected using Row Level Security (RLS).
+
+## Author
+
+Developed as a personal E-commerce project using modern frontend technologies and Supabase.
